@@ -80,10 +80,12 @@ export default function Footer() {
               <div 
                 className="fb-page"
                 data-href="https://www.facebook.com/profile.php?id=61586394059551"
-                data-width="280"
-                data-hide-cover="false"
-                data-show-facepile="false"
+                data-tabs="timeline"
+                data-height="600"
+                data-small-header="false"
                 data-adapt-container-width="true"
+                data-hide-cover="false"
+                data-show-facepile="true"
               ></div>
             </div>
           </div>
