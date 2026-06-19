@@ -71,6 +71,17 @@ export default function Footer() {
                 <span className="text-sm font-medium hidden sm:inline">Instagram</span>
               </a>
             </div>
+
+            <div className="mt-6 w-full flex justify-center md:justify-end overflow-hidden rounded-lg">
+              <div 
+                className="fb-page"
+                data-href="https://www.facebook.com/profile.php?id=61586394059551"
+                data-width="380"
+                data-hide-cover="false"
+                data-show-facepile="false"
+                data-adapt-container-width="true"
+              ></div>
+            </div>
           </div>
 
         </div>
