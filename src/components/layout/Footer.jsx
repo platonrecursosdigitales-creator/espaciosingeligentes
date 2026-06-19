@@ -1,3 +1,5 @@
+import { Instagram } from 'lucide-react';
+
 export default function Footer() {
   return (
     <footer className="bg-primary text-white py-12 border-t border-secondary">
@@ -22,10 +24,25 @@ export default function Footer() {
             </ul>
           </nav>
           
-          <div className="text-center md:text-right">
-            <span className="block text-sm text-gray-400 mb-1">Escríbenos por WhatsApp</span>
-            <a href="https://wa.me/524491807377" className="font-display font-bold text-accent hover:text-white transition-colors text-lg">
-              449 180 7377
+          <div className="text-center md:text-right flex flex-col items-center md:items-end gap-4">
+            <div>
+              <span className="block text-sm text-gray-400 mb-1">Escríbenos por WhatsApp</span>
+              <a href="https://wa.me/524491807377" className="font-display font-bold text-accent hover:text-white transition-colors text-lg">
+                449 180 7377
+              </a>
+            </div>
+            
+            <a 
+              href="https://www.instagram.com/espaciosinteligentes.mx" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group"
+              aria-label="Síguenos en Instagram"
+            >
+              <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent/10 group-hover:border-accent/30 transition-all">
+                <Instagram className="w-4 h-4" />
+              </div>
+              <span className="text-sm font-medium">Instagram</span>
             </a>
           </div>
 
