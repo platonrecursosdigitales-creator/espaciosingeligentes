@@ -25,10 +25,10 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-white py-16 border-t border-secondary">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-8 items-start">
           
           {/* Columna 1: Marca y Redes */}
-          <div className="lg:col-span-4 text-center md:text-left">
+          <div className="text-center md:text-left">
             <div className="mb-6 flex justify-center md:justify-start">
               <img src="/images/logo.png" alt="Espacios Inteligentes Logo" className="h-16 w-auto object-contain brightness-0 invert" />
             </div>
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
           
           {/* Columna 2: Navegación */}
-          <div className="lg:col-span-2 text-center md:text-left">
+          <div className="text-center md:text-left">
             <h4 className="font-bold text-white mb-6">Navegación</h4>
             <ul className="flex flex-col gap-4">
               <li><a href="#" className="text-sm font-medium text-gray-400 hover:text-accent transition-colors">Inicio</a></li>
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
           
           {/* Columna 3: Contacto */}
-          <div className="lg:col-span-3 text-center md:text-left">
+          <div className="text-center md:text-left">
             <h4 className="font-bold text-white mb-6">Contacto</h4>
             <span className="block text-sm text-gray-400 mb-2">Escríbenos por WhatsApp</span>
             <a href="https://wa.me/524491807377" className="font-display font-bold text-accent hover:text-white transition-colors text-xl block mb-6">
@@ -83,21 +83,6 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Columna 4: Facebook Widget */}
-          <div className="lg:col-span-3">
-            <div className="bg-white/5 p-2 rounded-xl border border-white/10 w-fit mx-auto md:mx-0 overflow-hidden">
-              <div 
-                className="fb-page"
-                data-href="https://www.facebook.com/profile.php?id=61586394059551"
-                data-tabs="timeline"
-                data-height="600"
-                data-small-header="false"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="true"
-              ></div>
-            </div>
-          </div>
 
         </div>
         
