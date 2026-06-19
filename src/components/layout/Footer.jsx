@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 const InstagramIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
@@ -13,6 +15,13 @@ const FacebookIcon = ({ className }) => (
 );
 
 export default function Footer() {
+  useEffect(() => {
+    // Forzar a Facebook a re-escanear el DOM para renderizar el widget en React
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    }
+  }, []);
+
   return (
     <footer className="bg-primary text-white py-16 border-t border-secondary">
       <div className="container-custom">
