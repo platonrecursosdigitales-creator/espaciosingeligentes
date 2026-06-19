@@ -1,4 +1,4 @@
-import { Instagram } from 'lucide-react';
+import { Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -32,18 +32,33 @@ export default function Footer() {
               </a>
             </div>
             
-            <a 
-              href="https://www.instagram.com/espaciosinteligentes.mx" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group"
-              aria-label="Síguenos en Instagram"
-            >
-              <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent/10 group-hover:border-accent/30 transition-all">
-                <Instagram className="w-4 h-4" />
-              </div>
-              <span className="text-sm font-medium">Instagram</span>
-            </a>
+            <div className="flex gap-4">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61586394059551&rdid=W010G6VnC730lRLx&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1LuQ5GPo9V%2F#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group"
+                aria-label="Síguenos en Facebook"
+              >
+                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent/10 group-hover:border-accent/30 transition-all">
+                  <Facebook className="w-4 h-4" />
+                </div>
+                <span className="text-sm font-medium hidden sm:inline">Facebook</span>
+              </a>
+
+              <a 
+                href="https://www.instagram.com/espaciosinteligentes.mx" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-accent transition-colors flex items-center gap-2 group"
+                aria-label="Síguenos en Instagram"
+              >
+                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent/10 group-hover:border-accent/30 transition-all">
+                  <Instagram className="w-4 h-4" />
+                </div>
+                <span className="text-sm font-medium hidden sm:inline">Instagram</span>
+              </a>
+            </div>
           </div>
 
         </div>
