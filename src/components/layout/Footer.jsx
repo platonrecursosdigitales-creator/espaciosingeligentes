@@ -20,9 +20,9 @@ export default function Footer() {
           
           {/* Columna 1: Marca y Redes */}
           <div className="lg:col-span-4 text-center md:text-left">
-            <span className="font-display font-bold text-2xl tracking-tight text-white block mb-4">
-              Espacios<span className="text-accent">Inteligentes</span>
-            </span>
+            <div className="mb-6 flex justify-center md:justify-start">
+              <img src="/images/logo.png" alt="Espacios Inteligentes Logo" className="h-16 w-auto object-contain brightness-0 invert" />
+            </div>
             <p className="text-gray-400 text-sm mb-8 max-w-xs mx-auto md:mx-0 leading-relaxed">
               Soluciones integrales para espacios que importan. Diagnóstico, visualización y mantenimiento experto.
             </p>
