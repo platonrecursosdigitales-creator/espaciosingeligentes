@@ -19,7 +19,7 @@ export default function Header() {
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center z-50 relative">
-          <img src="/images/logo.png" alt="Espacios Inteligentes" className="h-12 md:h-14 w-auto object-contain" />
+          <img src="/images/logo.png" alt="Espacios Inteligentes" className="h-16 md:h-20 w-auto object-contain" />
         </a>
 
         {/* Desktop Nav */}
