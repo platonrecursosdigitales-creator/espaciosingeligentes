@@ -22,7 +22,7 @@ export default function ServicesSection() {
           {/* Card 1: Diagnóstico Profesional */}
           <div className="bg-white rounded-2xl shadow-xl border-2 border-accent p-8 md:p-10 relative flex flex-col h-full transform transition-transform hover:-translate-y-2">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
-              Paso 1 - Obligatorio
+              Paso 1
             </div>
             
             <h3 className="font-display font-bold text-2xl text-primary mb-2 text-center">Diagnóstico Profesional Online</h3>
@@ -70,7 +70,7 @@ export default function ServicesSection() {
           {/* Card 2: Diseño 3D + Render */}
           <div className="bg-gray-50 rounded-2xl shadow-sm border border-gray-200 p-8 md:p-10 relative flex flex-col h-full opacity-90">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gray-300 text-gray-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
-              Paso 2 - Opcional
+              Paso 2
             </div>
             
             <h3 className="font-display font-bold text-2xl text-gray-600 mb-2 text-center">Diseño 3D + Render Fotorealista</h3>
