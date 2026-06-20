@@ -16,7 +16,6 @@ const FacebookIcon = ({ className }) => (
 
 export default function Footer() {
   useEffect(() => {
-    // Forzar a Facebook a re-escanear el DOM para renderizar el widget en React
     if (window.FB) {
       window.FB.XFBML.parse();
     }
@@ -32,9 +31,18 @@ export default function Footer() {
             <div className="mb-6 flex justify-center md:justify-start">
               <img src="/images/logo.png" alt="Espacios Inteligentes Logo" className="h-20 md:h-24 w-auto object-contain brightness-0 invert" />
             </div>
-            <p className="text-gray-400 text-sm mb-8 max-w-xs mx-auto md:mx-0 leading-relaxed">
-              Soluciones integrales para espacios que importan. Diagnóstico, visualización y mantenimiento experto.
+            <p className="text-gray-400 text-sm mb-4 max-w-xs mx-auto md:mx-0 leading-relaxed font-bold">
+              Espacios Inteligentes
             </p>
+            <p className="text-gray-400 text-sm mb-4 max-w-xs mx-auto md:mx-0 leading-relaxed">
+              Planea tu remodelación antes de invertir.
+            </p>
+            <div className="text-gray-400 text-sm mb-8 max-w-xs mx-auto md:mx-0 leading-relaxed">
+              <ul className="flex flex-col gap-1">
+                <li>• Diagnóstico Profesional Online</li>
+                <li>• Diseño 3D y Render Fotorealista como segunda etapa</li>
+              </ul>
+            </div>
             
             <div className="flex gap-4 justify-center md:justify-start">
               <a 
@@ -68,8 +76,8 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-6">Navegación</h4>
             <ul className="flex flex-col gap-4">
               <li><a href="#" className="text-sm font-medium text-gray-400 hover:text-accent transition-colors">Inicio</a></li>
-              <li><a href="#servicios" className="text-sm font-medium text-gray-400 hover:text-accent transition-colors">Servicios</a></li>
-              <li><a href="#nosotros" className="text-sm font-medium text-gray-400 hover:text-accent transition-colors">Nosotros</a></li>
+              <li><a href="#diagnostico" className="text-sm font-medium text-gray-400 hover:text-accent transition-colors">Diagnóstico</a></li>
+              <li><a href="#proceso" className="text-sm font-medium text-gray-400 hover:text-accent transition-colors">Cómo funciona</a></li>
               <li><a href="#contacto" className="text-sm font-medium text-gray-400 hover:text-accent transition-colors">Contacto</a></li>
             </ul>
           </div>
@@ -77,12 +85,11 @@ export default function Footer() {
           {/* Columna 3: Contacto */}
           <div className="text-center md:text-left">
             <h4 className="font-bold text-white mb-6">Contacto</h4>
-            <span className="block text-sm text-gray-400 mb-2">Escríbenos por WhatsApp</span>
+            <span className="block text-sm text-gray-400 mb-2">WhatsApp</span>
             <a href="https://wa.me/524491807377" className="font-display font-bold text-accent hover:text-white transition-colors text-xl block mb-6">
               449 180 7377
             </a>
           </div>
-
 
         </div>
         

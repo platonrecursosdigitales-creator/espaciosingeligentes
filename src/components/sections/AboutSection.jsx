@@ -1,46 +1,100 @@
+import { Camera, LayoutDashboard, Clock, Eye, CheckCircle2 } from 'lucide-react';
+
 export default function AboutSection() {
+  const processSteps = [
+    {
+      icon: <Camera className="w-6 h-6 text-accent" />,
+      title: "1. Envías fotos y medidas",
+      description: "Te guiamos para compartir la información necesaria de tu espacio."
+    },
+    {
+      icon: <LayoutDashboard className="w-6 h-6 text-accent" />,
+      title: "2. Analizamos tu distribución",
+      description: "Revisamos medidas, uso del espacio, necesidades y posibles mejoras."
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-accent" />,
+      title: "3. Recibes diagnóstico en 48h",
+      description: "Te entregamos plano técnico PDF, lista de materiales y presupuesto base de obra."
+    },
+    {
+      icon: <Eye className="w-6 h-6 text-accent" />,
+      title: "4. Decides si avanzas a Diseño 3D",
+      description: "Si quieres visualizar el resultado final, puedes cotizar el render fotorealista como segunda etapa."
+    }
+  ];
+
+  const benefits = [
+    "Planea antes de gastar.",
+    "Reduce errores de distribución.",
+    "Evita compras innecesarias.",
+    "Obtén claridad técnica antes de iniciar obra.",
+    "Recibe una base para cotizar con maestros locales.",
+    "Decide con mayor seguridad.",
+    "No necesitas visita física.",
+    "Entrega en 48 horas por WhatsApp."
+  ];
+
   return (
-    <section id="nosotros" className="section-padding bg-warmWhite">
+    <section id="proceso" className="py-20 bg-ivory">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div>
-            <span className="text-sm font-bold text-accent uppercase tracking-widest mb-4 block">Nuestro Enfoque</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">
-              Certeza y profesionalismo en cada metro cuadrado.
-            </h2>
-            <div className="space-y-6 text-lg text-secondary leading-relaxed">
-              <p>
-                En Espacios Inteligentes ayudamos a las personas a tomar mejores decisiones sobre sus espacios antes de invertir. Integramos diagnóstico, planeación arquitectónica y soluciones técnicas integrales.
-              </p>
-              <p>
-                Entendemos que iniciar una remodelación o coordinar el mantenimiento puede ser complejo y desgastante. Por eso, funcionamos como tu respaldo profesional: te brindamos la claridad visual y la tranquilidad operativa que requieres.
-              </p>
-            </div>
+        
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-primary mb-4">
+            ¿Cómo funciona el diagnóstico online?
+          </h2>
+          <p className="text-lg text-secondary">
+            Un proceso ágil, 100% online y sin complicaciones para darte claridad antes de tu obra.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+          
+          {/* Timeline / Process Steps */}
+          <div className="flex flex-col gap-8 relative">
+            <div className="absolute left-[27px] top-8 bottom-8 w-0.5 bg-gray-200 z-0"></div>
             
-            <div className="mt-10 border-l-4 border-accent pl-6 py-2">
-               <span className="font-serif italic text-primary text-2xl md:text-3xl block leading-snug">
-                 "Planeamos contigo antes de ejecutar, para reducir errores, cuidar tu inversión y lograr espacios más funcionales."
-               </span>
-            </div>
+            {processSteps.map((step, index) => (
+              <div key={index} className="flex gap-6 relative z-10">
+                <div className="w-14 h-14 rounded-full bg-white shadow-md border-2 border-accent flex items-center justify-center flex-shrink-0">
+                  {step.icon}
+                </div>
+                <div className="pt-3">
+                  <h3 className="font-display font-bold text-xl text-primary mb-2">{step.title}</h3>
+                  <p className="text-secondary leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
           
-          <div className="grid grid-cols-2 gap-4 md:gap-6 relative">
-             <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
-               <img 
-                 src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80" 
-                 alt="Interiorismo y arquitectura" 
-                 className="w-full h-full object-cover" 
-               />
-             </div>
-             <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mt-12">
-               <img 
-                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" 
-                 alt="Detalles de remodelación" 
-                 className="w-full h-full object-cover" 
-               />
-             </div>
+          {/* Process Image */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="/images/process_workspace.png" 
+              alt="Mesa de trabajo profesional con planos" 
+              className="w-full h-[500px] object-cover"
+            />
+          </div>
+
+        </div>
+
+        {/* Benefits */}
+        <div className="bg-white rounded-2xl shadow-lg p-10 md:p-14 border border-gray-100">
+          <div className="text-center mb-10">
+            <h3 className="font-display font-bold text-2xl md:text-3xl text-primary mb-4">Beneficios del Diagnóstico Online</h3>
+            <p className="text-secondary">Conoce exactamente lo que necesitas antes de comprar un solo material.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                <span className="text-primary font-medium text-lg">{benefit}</span>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   );

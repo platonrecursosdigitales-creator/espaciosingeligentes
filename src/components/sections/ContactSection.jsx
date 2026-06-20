@@ -1,60 +1,42 @@
-import { useEffect } from 'react';
+import { ArrowRight, Phone } from 'lucide-react';
 
 export default function ContactSection() {
-  useEffect(() => {
-    if (window.FB) {
-      window.FB.XFBML.parse();
-    }
-  }, []);
-  return (
-    <section id="contacto" className="section-padding bg-primary text-white">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          
-          <div className="lg:col-span-7 text-center lg:text-left">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">¿Listo para transformar tu espacio con inteligencia?</h2>
-            <p className="text-lg md:text-xl text-gray-300 mb-12">
-              Hagamos realidad el espacio que imaginas. Cuéntanos qué quieres mejorar en tu casa o negocio y te ayudamos a definir el primer paso.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a 
-                href="https://wa.me/524491807377?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Espacios%20Inteligentes.%20Quiero%20mejorar%20un%20espacio%20de%20mi%20casa%20o%20negocio" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-whatsapp px-8 py-4 w-full sm:w-auto text-center"
-              >
-                Contactarnos por WhatsApp
-              </a>
-              <a 
-                href="https://wa.me/524491807377?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20membres%C3%ADa%20de%20mantenimiento%20y%20tranquilidad" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="px-8 py-4 w-full sm:w-auto bg-primary-light border border-secondary text-white font-medium rounded-lg hover:bg-white/10 transition-colors text-center"
-              >
-                Quiero información sobre mantenimiento
-              </a>
-            </div>
-          </div>
-          
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="bg-white/5 p-4 rounded-2xl border border-white/10 w-full max-w-[400px]">
-              <h3 className="text-xl font-bold mb-4 text-center font-display tracking-wide">Comunidad en Facebook</h3>
-              <div className="overflow-hidden rounded-xl flex justify-center bg-white">
-                <div 
-                  className="fb-page"
-                  data-href="https://www.facebook.com/profile.php?id=61586394059551"
-                  data-tabs="timeline"
-                  data-height="500"
-                  data-small-header="false"
-                  data-adapt-container-width="true"
-                  data-hide-cover="false"
-                  data-show-facepile="true"
-                ></div>
-              </div>
-            </div>
-          </div>
+  const whatsappNumber = "524491807377";
+  const whatsappMessage = "Hola Espacios Inteligentes. Quiero mi Diagnóstico Profesional de $990. Mi ciudad es:";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
+  return (
+    <section id="contacto" className="py-24 bg-primary text-white relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/50 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/3"></div>
+      
+      <div className="container-custom relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
+            Comienza tu diagnóstico profesional online.
+          </h2>
+          
+          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Mándanos fotos y medidas de tu espacio. Te entregamos plano, presupuesto base y diagnóstico profesional en 48 horas por WhatsApp.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a 
+              href={whatsappUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-primary flex items-center justify-center gap-3 text-lg px-8 py-4 w-full sm:w-auto hover:bg-white hover:text-primary transition-colors"
+            >
+              Comprar Diagnóstico $990
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            
+            <div className="flex items-center gap-3 text-gray-300 bg-white/5 px-6 py-4 rounded-full border border-white/10">
+              <Phone className="w-5 h-5 text-accent" />
+              <span className="font-medium text-lg">WhatsApp: 449 180 7377</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
